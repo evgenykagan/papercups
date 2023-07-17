@@ -61,8 +61,8 @@
     "typescript": "~3.9.7"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+  "start": "NODE_OPTIONS='--max-old-space-size=4096' react-scripts start",
+    "build": "NODE_OPTIONS='--max-old-space-size=4096' react-scripts build",
     "postbuild": "mkdirp ../priv/static && cpx \"./build/**\" \"../priv/static\" --clean",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
